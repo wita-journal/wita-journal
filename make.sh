@@ -24,12 +24,14 @@ case "$1" in
         ### Build LaTeX to PDF
         [[ -d "$1.d" ]] || exit 1
         year="$(cut -d/ -f2 <<< "$1")"
-        issueid="$(cut -d/ -f3 <<< "$1" | cut -d. -f1)"
+        issue_id="$(cut -d/ -f3 <<< "$1" | cut -d. -f1)"
         ntex "$1"
-        cp -av ".tmp/$issueid.bcf" "issue/$year/$issueid.bcf"
-        biber "issue/$year/$issueid"
-        cp -av "issue/$year/$issueid.bbl" ".tmp/$issueid.bbl"
+        cp -av ".tmp/$issue_id.bcf" "issue/$year/$issue_id.bcf"
+        biber "issue/$year/$issue_id"
+        cp -av "issue/$year/$issue_id.bbl" ".tmp/$issue_id.bbl"
         ntex "$1" --2
+        pdf_path="_dist/issue/$year/$issue_id.pdf"
+        bash utils/splitpdf.sh "$pdf_path"
         ;;
 
     issue/*/*.tex.d/meta/cover.js )
