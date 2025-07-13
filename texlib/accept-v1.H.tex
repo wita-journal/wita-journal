@@ -1,0 +1,27 @@
+\input{texlib/wita-letter.H.tex}
+
+\setupdecorations
+\newcommand{\makeacceptletter}[6]{
+	% argv: date, year, id, sn, authors, title
+    \lettertitle{\center LETTER OF ACCEPTANCE}
+
+	\strut Dear #5,\par\bigskip
+
+    \strut Your submission manuscript
+
+    \begin{center}%
+        \parbox{0.75\linewidth}{%
+            \center%
+            \Large\strut#6\par%
+        }%
+    \end{center}
+
+    \strut has been accepted for WITA issue #3 (S/N #3).
+    \vfill
+
+    \flushright
+    \large
+    WITA Editor Board\par
+	#1\par
+    \vskip 15mm
+}

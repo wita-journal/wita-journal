@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{calc}
+\usepackage[textwidth=41em,tmargin=50mm,bmargin=32mm]{geometry}
+\usepackage{fontspec,paralist,enumitem,graphicx,eso-pic,datetime2,tabulary,tabularx,tabu,booktabs,sectsty,fancyhdr}
+\usepackage{amsmath,amssymb}
+\usepackage{xeCJK,xeCJKfntef}
+\usepackage{pbox,adjustbox,tikz,tcolorbox}
+
+\setmainfont[Numbers=Monospaced]{STIX Two Text}
+\setromanfont[Numbers=Monospaced]{STIX Two Text}
+\setsansfont[Numbers=Monospaced]{TeX Gyre Heros}
+\setmonofont[Scale=0.88]{JetBrains Mono NL}
+\setCJKmainfont[AutoFakeSlant=0.22]{Noto Serif CJK SC}
+\setCJKromanfont[AutoFakeSlant=0.22]{Noto Serif CJK SC}
+\setCJKsansfont[AutoFakeSlant=0.22]{Noto Sans CJK SC}
+\setCJKmonofont[AutoFakeSlant=0.22]{Noto Sans CJK SC}
+\setlength{\parindent}{0em} % Or 2em?
+\setlength{\parskip}{6pt}
+\allsectionsfont{\sffamily\raggedright}
+\setdefaultleftmargin{4em}{2em}{2em}{2em}{2em}{2em}
+\frenchspacing
+\sloppy
+\raggedbottom
+\pagestyle{empty}
+
+\makeatletter
+\newcommand{\setupdecorations}[0]{
+    \AddToShipoutPictureBG{
+        \put(\Gm@lmargin,260mm){\parbox[t][55mm][t]{\textwidth}{\includegraphics[width=0.33\linewidth]{vi/dist/wm1.png}}}
+    }
+}
+\makeatother
+
+\newcommand{\lettertitle}[1]{
+    \begin{minipage}{\linewidth}%
+        \sffamily\LARGE\bfseries\strut#1\strut%
+    \end{minipage}%
+    \par\vskip 15mm
+}
