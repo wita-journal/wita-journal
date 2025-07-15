@@ -1,0 +1,186 @@
+\documentclass[12pt,a4paper,twoside]{article}
+\usepackage{calc}
+\usepackage[textwidth=35em,vmargin=35mm,bindingoffset=15mm]{geometry}
+% \usepackage[textwidth=35em,vmargin=35mm]{geometry}
+\usepackage{fontspec,paralist,enumitem,graphicx,eso-pic,datetime2,tabulary,tabularx,tabu,booktabs,sectsty,fancyhdr}
+\usepackage{amsmath,amssymb}
+\usepackage{xeCJK,xeCJKfntef}
+\usepackage{pbox,adjustbox,tikz,tcolorbox}
+\usepackage{fontawesome5}
+
+\setmainfont[Numbers=Monospaced]{TeX Gyre Termes}
+\setromanfont[Numbers=Monospaced]{TeX Gyre Termes}
+\setsansfont[Numbers=Monospaced]{TeX Gyre Heros}
+\setmonofont[Scale=0.88]{JetBrains Mono NL}
+\setCJKmainfont[AutoFakeSlant=0.22]{Noto Serif CJK SC}
+\setCJKromanfont[AutoFakeSlant=0.22]{Noto Serif CJK SC}
+\setCJKsansfont[AutoFakeSlant=0.22]{Noto Sans CJK SC}
+\setCJKmonofont[AutoFakeSlant=0.22]{Noto Sans CJK SC}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{6pt}
+\allsectionsfont{\sffamily\raggedright}
+\setdefaultleftmargin{4em}{2em}{2em}{2em}{2em}{2em}
+\frenchspacing
+\sloppy
+\raggedbottom
+
+
+
+
+\usepackage[
+	backend=biber,
+	style=numeric,
+	sorting=ynt
+]{biblatex}
+\renewcommand*{\bibfont}{\footnotesize}
+
+
+
+\makeatletter
+\newcommand{\markasdraft}[0]{
+	\AddToShipoutPictureFG*{
+		\put(\Gm@lmargin,\Gm@bmargin){%
+			\rotatebox{90}{\scalebox{2}{\Huge\textcolor{gray}{\fbox{PREPRINT}}}}
+		}
+	}
+}
+\newcommand{\@issueyear}[0]{1453}
+\newcommand{\@issueid}[0]{145305}
+\newcommand{\@issueserial}[0]{42}
+\newcommand{\setdocmetadata}[3]{
+	% argv: year, issue_id, serial_number
+	\renewcommand{\@issueyear}{#1}
+	\renewcommand{\@issueid}{#2}
+	\renewcommand{\@issueserial}{#3}
+}
+\newcommand{\@setentryid}[0]{NOTSET}
+\newcommand{\setentryid}[1]{
+	\clearpage
+	\renewcommand{\@setentryid}[0]{#1}
+	\setcounter{section}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+}
+\newcommand{\@setprimarytag}[0]{NOTSET}
+\newcommand{\setprimarytag}[1]{
+	\renewcommand{\@setprimarytag}[0]{#1}
+}
+\newcommand{\issuepath}[0]{issue/\@issueyear/\@issueid.tex.d}
+\newcommand{\entrypath}[0]{issue/\@issueyear/\@issueid.tex.d/entry/\@setentryid}
+\newcounter{EntrySeqInIssue}
+\setcounter{EntrySeqInIssue}{0}
+\newcommand{\stdarticle}[3]{%
+	\stepcounter{EntrySeqInIssue}
+	\normalsize\upshape\rmfamily\mdseries%
+	% Pre-article heading...
+	\vspace{-10mm}%
+	\noindent\parbox{\linewidth}{%
+		\small\sffamily
+		\strut\textbf{WEIGHT IN THE ATTENTION}\\
+		% \strut Issue \@issueid, S/N \@issueserial, \strut Entry \arabic{EntrySeqInIssue}\\%
+		\strut WITA.\@issueid.\arabic{EntrySeqInIssue}\hfill%
+		\strut\textbf{\@setprimarytag}%
+		\par%
+		\noindent\rule{\linewidth}{0.8pt}%
+	}\par%
+	\vskip 5mm%
+	% Primary tag...
+	\vskip 5mm%
+	% Read article title...
+	\noindent\parbox{\linewidth}{%
+		\parskip=13pt%
+		\sffamily%
+		\noindent\parbox{\linewidth}{\Large\sffamily\bfseries\strut\raggedright#1}\par
+		\noindent\parbox{\linewidth}{\normalsize\strut\raggedright#2}\par
+		\noindent\parbox{\linewidth}{\normalsize\strut\raggedright#3}\par
+	}\par%
+	\vskip 30pt plus 10pt
+}
+\newcommand{\importarticle}[1]{%
+	\par%
+	\begin{refsection}[#1]
+		\input{\issuepath/entry/#1/main.tex}
+	\end{refsection}
+}
+
+\newcommand{\coverarticlerow}[2]{
+	\parbox{\linewidth}{
+		\flushright
+		\strut\large#1\strut~~~%
+		\textbf{\normalsize#2}
+	}\par
+}
+\newcommand{\coverarticles}[1]{
+	\noindent\hfill%
+	\scalebox{1.1}{\parbox{0.75\linewidth}{
+			\parindent=0pt
+			\parskip=22pt
+			\large\flushright
+			#1
+		}}
+}
+\newcommand{\makecoverpage}[1]{
+	\begin{titlepage}
+		\newgeometry{margin=23mm}
+		\sffamily
+		\bfseries\noindent
+		\includegraphics[width=0.66\linewidth]{vi/dist/wm1.png}\par\vskip 20pt
+		\mdseries
+
+		% \Large
+		\fontsize{33pt}{33pt}\selectfont%
+		\noindent%
+		\adjustbox{width=0.33\linewidth}{\scalebox{1}[0.7]{\bfseries\strut ISSUE \@issueid}}%
+		\large
+
+		\vfill
+		#1
+	\end{titlepage}
+	\restoregeometry
+	\pagestyle{empty}
+	\rmfamily\normalsize\mdseries\upshape\cleardoublepage
+	\pagestyle{plain}
+	\setcounter{page}{1}
+}
+\makeatother
+
+
+% Article showing
+\newcommand{\articlecopyrightinfo}[1]{
+	\vspace{-6mm}
+	\stdinfobox{\faIcon{info-circle}~~~Article copyright licensing scheme: \textbf{#1}.}
+	\vspace{-3mm}
+}%
+\newcommand{\stdinfobox}[1]{
+	\begin{tcolorbox}[standard jigsaw,colback=blue!6!black!2,colframe=blue!19!black!19,arc=0pt,boxrule=0.6pt]%
+		\small\mdseries\upshape\sffamily\strut%
+		#1%
+	\end{tcolorbox}
+}%
+\newcommand{\authorrow}[2]{%
+	% argv: author, institution
+	\noindent\pbox{999mm}{\strut#1~~~\small\strut#2}%
+}
+
+% Biblatex
+\newcommand{\addcitebib}[1]{\addbibresource[label=#1]{\issuepath/entry/#1/cite.bib}}
+
+
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+	numbersep=5pt,
+	backgroundcolor=\color{black!4},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=true,
+	breakautoindent=true,
+	linewidth=\textwidth
+}
+
+

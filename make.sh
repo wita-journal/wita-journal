@@ -23,6 +23,7 @@ case "$1" in
     issue/*/*.tex )
         ### Build LaTeX to PDF
         [[ -d "$1.d" ]] || exit 1
+        ./make.sh "$1.d" || exit 1
         year="$(cut -d/ -f2 <<< "$1")"
         issue_id="$(cut -d/ -f3 <<< "$1" | cut -d. -f1)"
         ntex "$1"

@@ -1,0 +1,22 @@
+{
+  "year": "2025",
+  "id": "202508",
+  "sn": 1,
+  "pages": {
+    "001": "3-5",
+    "002": "6-8",
+    "003": "9-12"
+  },
+  "article": [
+    {
+      "id": "example",
+      "title": "Example Dummy Article",
+      "authors": [
+        "Neruthes (WITA Editor)"
+      ],
+      "authors_simple": "Neruthes (WITA Editor)",
+      "date": "1970-01-01",
+      "license": "Public Domain"
+    }
+  ]
+}

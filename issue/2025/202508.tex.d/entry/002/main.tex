@@ -1,15 +1,145 @@
 \setentryid{002}
-% \nocite{*}
+\setprimarytag{Editorial Information}
+\stdarticle{WITA Manuscript Submission Guide}{%
+	\authorrow{Neruthes}{(WITA Editor)}%
+}{2025-07-14}
 
-\stdarticle{Another Article}{%
-	\authorrow{Neruthes}{WITA Editor}%
+\articlecopyrightinfo{CC BY-ND 4.0}
+
+
+\providecommand{\showcmd}[0]{}
+\providecommand{\showcmdparam}[0]{}
+\renewcommand{\showcmd}[1]{\strut{\textbackslash#1}}
+\renewcommand{\showcmdparam}[1]{\strut\textbraceleft{#1}\textbraceright}
+
+
+
+
+
+\section*{Abstract}
+Like most journals, Weight in the Attention (WITA) handles manuscript submissions.
+A rare characteristic of WITA is that the submission process is based on Git, GitHub, and pull request.
+This guide offers a comprehensive guide to both editors and authors in good faith of establishing an efficient manuscript acceptance workflow.
+
+
+
+
+\section{Directory Structure}
+Issues are grouped by year inside the ``/issue'' directory.
+Each issue consists of a ``tex'' file and a ``tex.d'' directory.
+
+
+\subsection{Issues Catalog}
+Sketch of directory structure ``/issue'':
+
+\begin{lstlisting}
+/issue/
+  |- 2025/              -> Year, format YYYY
+    |- 202508.tex       -> IssueID, format YYYYMM
+    |- 202508.tex.d/
+      |- meta/
+      |- entry/
+\end{lstlisting}
+
+
+\subsection{Inside Single Issue}
+Sketch of directory structure ``/issue/Year/IssueID.tex.d'':
+
+\begin{lstlisting}
+../202508.tex.d/        -> IssueDir
+  |- meta/
+  |- entry/
+    |- 001/             -> EntryID
+\end{lstlisting}
+
+
+\section{Organizing Your Entry}
+Sketch of directory structure ``/issue/Year/IssueID.tex.d/entry/EntryID/'':
+
+\begin{lstlisting}
+../001/                 -> EntryDir
+  |- info.toml
+  |- main.tex
+  |- cite.bib
+\end{lstlisting}
+
+You should have these 3 files.
+In addition, you may have subdirectories for images and code pieces.
+
+\subsection{info.toml}
+This is a TOML file that contains the metadata of the submitted manuscript.
+
+Example:
+\begin{lstlisting}
+[[article]]
+id = "myrun"                # Same to EntryID
+title = "Article Title Goes Here"
+authors = ["John Appleseed (Reed College)", "John Doe (*)"]
+authors_simple = "Appleseed, J., et al."
+date = "2025-07-13"
+license = "CC BY-ND 4.0"    # Omit NC to allow more
+\end{lstlisting}
+
+\subsection{main.tex}
+This is where your article content goes.
+
+Example:
+\begin{lstlisting}
+\setentryid{myrun}
+\stdarticle{Article Title Goes Here}{%
+    \authorrow{John Appleseed}{(Reed College)}\\%
+    \authorrow{John Doe}{}%
 }{2025-07-13}
+\end{lstlisting}
+
+You should start the file like the example.
+
+Here are commands you can use:
+
+\begin{itemize}
+	\raggedright
+	\item \texttt{\showcmd{setentryid}}\\
+	      Declares article EntryID.
+
+	\item \texttt{\showcmd{stdarticle}\showcmdparam{Title}\showcmdparam{Authors}\showcmdparam{SubmissionDate}}\\
+	      Print article title, author, and date information.
+
+	\item \texttt{\showcmd{entrypath}}\\
+	      Get path to entry. Useful for \texttt{\showcmd{includegraphics}\showcmdparam{\showcmd{entrypath}/pic-1}}.
+
+	\item \texttt{\showcmd{authorrow}\showcmdparam{Name}\showcmdparam{Institution}}\\
+	      Prints a row of author information. Must use inside argv1 of \texttt{\showcmd{stdarticle}}.
+
+\end{itemize}
+
+\subsection{cite.bib}
+Unlike others, \textbf{cite.bib} may be omitted if your manuscript contains no citation at all.
 
 
-% \begin{figure}[hbt!]
-%     \includegraphics[width=\linewidth]{\entrypath/photo-1.jpg}
-%     \caption{This is a random photo from Unsplash}
-% \end{figure}
-// TODO
 
-\printbibliography
+
+\section{Submission Workflow}
+Follow these steps to submit your article to WITA.
+
+\begin{enumerate}
+	\item \textbf{Fork Repository}: Fork the repository and clone your fork to your machine.
+	\item \textbf{Elect EntryID}: Decide a short string for your article that is unlikely to collide with other authors of the same entry.
+	\item \textbf{Create Branch}: In your local repository, create a branch named after your username (e.g. ``johndoe/entry256'').
+	\item \textbf{Create Entry}: In your branch, create relevant directories and files.
+	\item \textbf{Local Build}: Run the issue building workflow locally and debug problems, if any.
+	\item \textbf{Create Pull Request}: Create a pull request that merges from your fork ``johndoe:johndoe/entry256'' to same-name upstream branch.
+	\item \textbf{Await Editor Review}: Editors will review your article and will very likely accept it.
+\end{enumerate}
+
+The following list contains further clarification.
+
+\begin{enumerate}
+    \item If you include non-empty ``email'' field in your ``info.toml'' file, an editor will mail you letter of acceptance when your article is accepted.
+    \item You should think carefully in which issue you hope to see your article in. If in doubt, use dummy issue for nonexistent IssueID ``199112''.
+    An editor will move to an upcoming IssueID.
+    \item Even if your article is accepted, there is no guarantee that it will be included in the next coming issue.
+    \item You are free to, and encouraged to, self-publish your article anywhere else such as your personal blog. It is \emph{your} article, after all.
+\end{enumerate}
+
+
+

@@ -1,0 +1,24 @@
+\input{texlib/issue-v1.H.tex}
+\setdocmetadata{1991}{199112}{NaN}
+\author{Neruthes} % Chief editor of a particular issue
+
+
+
+\addcitebib{example}
+
+
+
+
+\begin{document}
+\makecoverpage{
+    \markasdraft
+    \AddToShipoutPictureBG*{\put(0mm,0mm){\includegraphics[height=\paperheight]{\issuepath/meta/cover.js.svg.pdf}}}
+	\coverarticles{
+		\coverarticlerow{\Large\bfseries Example Dummy Article}{P.1}
+		\coverarticlerow{Example Dummy Article}{P.3}
+	}
+}
+
+\importarticle{example}
+
+\end{document}

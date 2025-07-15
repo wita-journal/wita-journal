@@ -1,7 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
-    <text font-family="Mona-Sans" font-weight="500" font-size="100" x="30" y="10" transform="scale(1,0.7)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -100 800 700">
+    <defs>
+        <polygon id="S_triangle" points="0,0 100,0 100,100" fill="currentColor" />
+    </defs>
+    <text font-family="Mona-Sans" font-weight="700" font-size="103.85" fill="currentColor" x="30" y="250" transform="scale(1,0.7)">
         <tspan x="30" dy="90">WEIGHT</tspan>
         <tspan x="30" dy="90">IN THE</tspan>
         <tspan x="30" dy="90">ATTENTION</tspan>
     </text>
+
+    <!-- <use href="#S_triangle" transform="translate(130,50) scale(-1,1)" />
+    <use href="#S_triangle" transform="translate(230,50) scale(-1,1)" />
+    <use href="#S_triangle" transform="translate(330,50) scale(-1,1)" />
+    <use href="#S_triangle" transform="translate(430,50) scale(-1,1)" />
+    <use href="#S_triangle" transform="translate(430,50) scale(2)" /> -->
 </svg>

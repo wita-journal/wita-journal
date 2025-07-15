@@ -2,14 +2,53 @@
   "year": "2025",
   "id": "202508",
   "sn": 1,
+  "pages": {
+    "001": "3-5",
+    "002": "6-8",
+    "003": "9-12"
+  },
   "article": [
     {
       "id": "001",
       "title": "The founding of Weight in the Attention, a journal for the AIGC Zeitgeist",
       "authors": [
-        "Neruthes"
+        "Neruthes (WITA Editor)"
       ],
-      "date": "2025-07-13"
+      "authors_simple": "Neruthes (WITA Editor)",
+      "date": "2025-07-17",
+      "license": "CC BY-ND 4.0"
+    },
+    {
+      "id": "002",
+      "title": "WITA Manuscript Submission Guide",
+      "authors": [
+        "Neruthes (WITA Editor)"
+      ],
+      "authors_simple": "Neruthes (WITA Editor)",
+      "date": "2025-07-14",
+      "license": "CC BY-ND 4.0"
+    },
+    {
+      "id": "003",
+      "title": "My Startup Is Just a Claude Wrapper, but It’s a Free Claude Wrapper",
+      "authors": [
+        "Neruthes",
+        "ChatGPT (OpenAI)"
+      ],
+      "authors_simple": "Neruthes, et al.",
+      "date": "2025-07-14",
+      "license": "Public Domain"
+    },
+    {
+      "id": "004",
+      "title": "Navigating the AI Geoscape: A Multi-Faceted Analysis of Manus AI's Strategic Retreat from Mainland China",
+      "authors": [
+        "Neruthes",
+        "Gemini (Google)"
+      ],
+      "authors_simple": "Neruthes, et al.",
+      "date": "2025-07-14",
+      "license": "Public Domain"
     }
   ]
 }
