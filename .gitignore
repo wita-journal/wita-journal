@@ -330,3 +330,5 @@ _dist/
 cover.js.svg.pdf
 nogit/
 website/www/
+website/data/
+website/build/

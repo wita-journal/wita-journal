@@ -20,8 +20,11 @@
 \newcommand{\mytitlepageI}[2]{
     % argv: title, footer
     \sffamily\mdseries\upshape\normalsize%
+    \AddToShipoutPictureBG*{
+        \put(-30bp,-30bp){\includegraphics[width=\paperwidth+60bp]{issue/0000/000000.tex.d/meta/cover.js.svg.pdf}}
+    }
     % \strut#1\par
-    \hspace{-3bp}\stdlogo\par
+    \hspace{-2bp}\stdlogo\par
     \vskip 40bp
     \scalebox{1.15}{%
         \parbox{0.75\linewidth}{\raggedright\LARGE\rmfamily\usefancyfont\bfseries\strut#1\strut}%

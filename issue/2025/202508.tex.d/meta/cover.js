@@ -20,8 +20,17 @@ for (let itr = 0; itr <= 30; itr++) {
 };
 
 let SGV_OUTPUT = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 2100">
+    <defs>
+        <mask id="main_canvas_zone">
+            <rect x="90" y="90" width="1320" height="1920" fill="white" />
+        </mask>
+    </defs>
+
     <rect x="0" y="0" width="1500" height="2100" fill="#FAFAFA00" />
+
+    <g mask="url(#main_canvas_zone)">
     ${SVG_CONTENT}
+    </g>
 </svg>
 `;
 

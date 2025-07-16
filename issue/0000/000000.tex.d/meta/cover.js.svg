@@ -1,35 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 2100">
-    <rect x="0" y="0" width="1500" height="2100" fill="#FAFAFA00" />
-    <path d="M 400,400.00 c 72.00,212.00,-235.00,356.00,-250.00,1050.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 420,373.87 c 77.00,225.00,-250.00,343.00,-229.00,1128.40" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 440,348.02 c 82.00,238.00,-265.00,330.00,-208.00,1205.93" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 460,322.75 c 87.00,251.00,-280.00,317.00,-187.00,1281.76" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 480,298.32 c 92.00,264.00,-295.00,304.00,-166.00,1355.05" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 500,275.00 c 97.00,277.00,-310.00,291.00,-145.00,1425.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 520,253.05 c 102.00,290.00,-325.00,278.00,-124.00,1490.84" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 540,232.72 c 107.00,303.00,-340.00,265.00,-103.00,1551.85" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 560,214.21 c 112.00,316.00,-355.00,252.00,-82.00,1607.36" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 580,197.75 c 117.00,329.00,-370.00,239.00,-61.00,1656.76" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 600,183.49 c 122.00,342.00,-385.00,226.00,-40.00,1699.52" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 620,171.61 c 127.00,355.00,-400.00,213.00,-19.00,1735.16" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 640,162.24 c 132.00,368.00,-415.00,200.00,2.00,1763.29" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 660,155.46 c 137.00,381.00,-430.00,187.00,23.00,1783.61" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 680,151.37 c 142.00,394.00,-445.00,174.00,44.00,1795.89" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 700,150.00 c 147.00,407.00,-460.00,161.00,65.00,1800.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 720,151.37 c 152.00,420.00,-475.00,148.00,86.00,1795.89" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 740,155.46 c 157.00,433.00,-490.00,135.00,107.00,1783.61" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 760,162.24 c 162.00,446.00,-505.00,122.00,128.00,1763.29" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 780,171.61 c 167.00,459.00,-520.00,109.00,149.00,1735.16" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 800,183.49 c 172.00,472.00,-535.00,96.00,170.00,1699.52" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 820,197.75 c 177.00,485.00,-550.00,83.00,191.00,1656.76" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 840,214.21 c 182.00,498.00,-565.00,70.00,212.00,1607.36" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 860,232.72 c 187.00,511.00,-580.00,57.00,233.00,1551.85" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 880,253.05 c 192.00,524.00,-595.00,44.00,254.00,1490.84" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 900,275.00 c 197.00,537.00,-610.00,31.00,275.00,1425.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 920,298.32 c 202.00,550.00,-625.00,18.00,296.00,1355.05" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 940,322.75 c 207.00,563.00,-640.00,5.00,317.00,1281.76" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 960,348.02 c 212.00,576.00,-655.00,-8.00,338.00,1205.93" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 980,373.87 c 217.00,589.00,-670.00,-21.00,359.00,1128.40" stroke="#FFDD0044" stroke-width="8" fill="none" />
-<path d="M 1000,400.00 c 222.00,602.00,-685.00,-34.00,380.00,1050.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
+    <defs>
+        <mask id="main_canvas_zone">
+            <rect x="90" y="90" width="1320" height="1920" fill="white" />
+        </mask>
+    </defs>
 
+    <rect x="0" y="0" width="1500" height="2100" fill="#FAFAFA00" />
+
+    <g mask="url(#main_canvas_zone)">
+    <path transform="translate(0,0) rotate(0)" d="M 0,0 c 438.00,552.00,-456.00,906.00,1875.00,2250.00" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(60,-5) rotate(1.5)" d="M 0,0 c 452.60,539.40,-471.20,964.10,1891.00,2325.31" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(120,-10) rotate(3)" d="M 0,0 c 467.20,524.80,-486.40,1024.00,1904.00,2400.64" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(180,-15) rotate(4.5)" d="M 0,0 c 481.80,508.20,-501.60,1085.70,1914.00,2475.99" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(240,-20) rotate(6)" d="M 0,0 c 496.40,489.60,-516.80,1149.20,1921.00,2551.36" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(300,-25) rotate(7.5)" d="M 0,0 c 511.00,469.00,-532.00,1214.50,1925.00,2626.75" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(360,-30) rotate(9)" d="M 0,0 c 525.60,446.40,-547.20,1281.60,1926.00,2702.16" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(420,-35) rotate(10.5)" d="M 0,0 c 540.20,421.80,-562.40,1350.50,1924.00,2777.59" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(480,-40) rotate(12)" d="M 0,0 c 554.80,395.20,-577.60,1421.20,1919.00,2853.04" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(540,-45) rotate(13.5)" d="M 0,0 c 569.40,366.60,-592.80,1493.70,1911.00,2928.51" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(600,-50) rotate(15)" d="M 0,0 c 584.00,336.00,-608.00,1568.00,1900.00,3004.00" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(660,-55) rotate(16.5)" d="M 0,0 c 598.60,303.40,-623.20,1644.10,1886.00,3079.51" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(720,-60) rotate(18)" d="M 0,0 c 613.20,268.80,-638.40,1722.00,1869.00,3155.04" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(780,-65) rotate(19.5)" d="M 0,0 c 627.80,232.20,-653.60,1801.70,1849.00,3230.59" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(840,-70) rotate(21)" d="M 0,0 c 642.40,193.60,-668.80,1883.20,1826.00,3306.16" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(900,-75) rotate(22.5)" d="M 0,0 c 657.00,153.00,-684.00,1966.50,1800.00,3381.75" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(960,-80) rotate(24)" d="M 0,0 c 671.60,110.40,-699.20,2051.60,1771.00,3457.36" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1020,-85) rotate(25.5)" d="M 0,0 c 686.20,65.80,-714.40,2138.50,1739.00,3532.99" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1080,-90) rotate(27)" d="M 0,0 c 700.80,19.20,-729.60,2227.20,1704.00,3608.64" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1140,-95) rotate(28.5)" d="M 0,0 c 715.40,-29.40,-744.80,2317.70,1666.00,3684.31" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1200,-100) rotate(30)" d="M 0,0 c 730.00,-80.00,-760.00,2410.00,1625.00,3760.00" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1260,-105) rotate(31.5)" d="M 0,0 c 744.60,-132.60,-775.20,2504.10,1581.00,3835.71" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1320,-110) rotate(33)" d="M 0,0 c 759.20,-187.20,-790.40,2600.00,1534.00,3911.44" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1380,-115) rotate(34.5)" d="M 0,0 c 773.80,-243.80,-805.60,2697.70,1484.00,3987.19" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1440,-120) rotate(36)" d="M 0,0 c 788.40,-302.40,-820.80,2797.20,1431.00,4062.96" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1500,-125) rotate(37.5)" d="M 0,0 c 803.00,-363.00,-836.00,2898.50,1375.00,4138.75" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1560,-130) rotate(39)" d="M 0,0 c 817.60,-425.60,-851.20,3001.60,1316.00,4214.56" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1620,-135) rotate(40.5)" d="M 0,0 c 832.20,-490.20,-866.40,3106.50,1254.00,4290.39" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1680,-140) rotate(42)" d="M 0,0 c 846.80,-556.80,-881.60,3213.20,1189.00,4366.24" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1740,-145) rotate(43.5)" d="M 0,0 c 861.40,-625.40,-896.80,3321.70,1121.00,4442.11" stroke="#0099FF11" stroke-width="8" fill="none" />
+<path transform="translate(1800,-150) rotate(45)" d="M 0,0 c 876.00,-696.00,-912.00,3432.00,1050.00,4518.00" stroke="#0099FF11" stroke-width="8" fill="none" />
+
+    </g>
 </svg>

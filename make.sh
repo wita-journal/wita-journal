@@ -10,6 +10,9 @@ if [[ -e "$2" ]]; then
 fi
 
 case "$1" in
+    issue/*/*. )
+        [[ -e "${1}tex" ]] && ./make.sh "${1}tex"
+        ;;
     issue/*/*.tex.d/ )
         ### Build for issue metadata
         (
@@ -46,6 +49,9 @@ case "$1" in
         rsvg-convert "$1" -h2100 --format=pdf -o "$1.pdf"
         ;;
 
+    snswg/*/*.tex )
+        ntex "$1"
+        ;;
     vi | vi/ )
         ### Generate VI assets
         for sh in vi/sh/*.sh; do
@@ -54,5 +60,6 @@ case "$1" in
         ;;
     website/ )
         for kk in issue entry snswg; do rsync -auvpx --mkpath _dist/$kk/ website/www/files/$kk/ ; done
+        cd website && bash build.sh
         ;;
 esac

@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 2100">
+    <defs>
+        <mask id="main_canvas_zone">
+            <rect x="90" y="90" width="1320" height="1920" fill="white" />
+        </mask>
+    </defs>
+
     <rect x="0" y="0" width="1500" height="2100" fill="#FAFAFA00" />
+
+    <g mask="url(#main_canvas_zone)">
     <path d="M 400,400.00 c 72.00,212.00,-235.00,356.00,-250.00,1050.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
 <path d="M 420,373.87 c 77.00,225.00,-250.00,343.00,-229.00,1128.40" stroke="#FFDD0044" stroke-width="8" fill="none" />
 <path d="M 440,348.02 c 82.00,238.00,-265.00,330.00,-208.00,1205.93" stroke="#FFDD0044" stroke-width="8" fill="none" />
@@ -32,4 +40,5 @@
 <path d="M 980,373.87 c 217.00,589.00,-670.00,-21.00,359.00,1128.40" stroke="#FFDD0044" stroke-width="8" fill="none" />
 <path d="M 1000,400.00 c 222.00,602.00,-685.00,-34.00,380.00,1050.00" stroke="#FFDD0044" stroke-width="8" fill="none" />
 
+    </g>
 </svg>
