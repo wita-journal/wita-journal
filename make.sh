@@ -52,4 +52,7 @@ case "$1" in
             bash "$sh"
         done
         ;;
+    website/ )
+        for kk in issue entry snswg; do rsync -auvpx --mkpath _dist/$kk/ website/www/files/$kk/ ; done
+        ;;
 esac

@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{calc}
+\usepackage[paperwidth=300bp,paperheight=400bp,textwidth=21em,vmargin=40bp]{geometry}
+\usepackage{fontspec,xeCJK,xeCJKfntef,datetime2,xcolor,graphicx,eso-pic,tcolorbox,adjustbox,eqparbox,tabularx,tabu,paralist,enumitem}
+
+\usepackage{tgtermes,tgheros,tgcursor}
+\usepackage[T1]{fontenc}
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\frenchspacing
+\pagestyle{empty}
+
+
+
+\newcommand{\usefancyfont}[0]{\fontspec[FakeBold=1.7]{Instrument Serif}}
+
+\newcommand{\mytitlepageI}[2]{
+    % argv: title, footer
+    \sffamily\mdseries\upshape\normalsize%
+    % \strut#1\par
+    \hspace{-3bp}\stdlogo\par
+    \vskip 40bp
+    \scalebox{1.15}{%
+        \parbox{0.75\linewidth}{\raggedright\LARGE\rmfamily\usefancyfont\bfseries\strut#1\strut}%
+    }%
+    \par\vfill\strut#2\par\sffamily\clearpage
+}
+
+\newcommand{\stdlogo}[0]{
+    \includegraphics[width=100bp]{vi/res/wm1.png}
+}
+
+\newcommand{\stdpagetitle}[1]{%
+    \parbox{\linewidth}{\usefancyfont\LARGE#1}%
+}

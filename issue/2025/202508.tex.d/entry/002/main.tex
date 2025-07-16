@@ -76,6 +76,7 @@ id = "myrun"                # Same to EntryID
 title = "Article Title Goes Here"
 authors = ["John Appleseed (Reed College)", "John Doe (*)"]
 authors_simple = "Appleseed, J., et al."
+email = "user@example.com"
 date = "2025-07-13"
 license = "CC BY-ND 4.0"    # Omit NC to allow more
 \end{lstlisting}
@@ -127,18 +128,28 @@ Follow these steps to submit your article to WITA.
 	\item \textbf{Create Branch}: In your local repository, create a branch named after your username (e.g. ``johndoe/entry256'').
 	\item \textbf{Create Entry}: In your branch, create relevant directories and files.
 	\item \textbf{Local Build}: Run the issue building workflow locally and debug problems, if any.
-	\item \textbf{Create Pull Request}: Create a pull request that merges from your fork ``johndoe:johndoe/entry256'' to same-name upstream branch.
+	\item \textbf{Create Pull Request}: Create a pull request that merges from your fork ``johndoe:johndoe/entry256'' to upstream master branch.
 	\item \textbf{Await Editor Review}: Editors will review your article and will very likely accept it.
 \end{enumerate}
 
 The following list contains further clarification.
 
 \begin{enumerate}
-    \item If you include non-empty ``email'' field in your ``info.toml'' file, an editor will mail you letter of acceptance when your article is accepted.
-    \item You should think carefully in which issue you hope to see your article in. If in doubt, use dummy issue for nonexistent IssueID ``199112''.
-    An editor will move to an upcoming IssueID.
-    \item Even if your article is accepted, there is no guarantee that it will be included in the next coming issue.
-    \item You are free to, and encouraged to, self-publish your article anywhere else such as your personal blog. It is \emph{your} article, after all.
+	\item You are free to, and encouraged to, self-publish your article anywhere else such as your personal blog.
+	      It is \emph{your} article, after all.
+	\item If you include non-empty ``email'' field in your ``info.toml'' file,
+	      an editor will mail you a letter of acceptance when your article is accepted.
+	\item Even if your article is accepted, there is no guarantee that it will be included in the next coming issue.
+	\item When creating pull request, use dummy IssueID ``000000'' (/issue/0000/000000.tex.d).
+	      An editor will move your article to an upcoming IssueID after acceptance.
+	\item To check whether your article is bug-free, you can run \CJKunderline{./make.sh issue/0000/000000.tex}.
+	      If you do not have a GNU/Linux machine, try WSL.
+	\item Your article should have a redistributable license such, e.g. CC BY-ND, CC BY-SA, GFDL. Alternatively, you can make it public domain.
+	      Open knowledge is great.
+	\item LLM-created articles are encouraged to be submitted as public domain work.
+	\item If the article is created by LLM, the LLM should be attributed as an author.
+	      Name can be online public service (e.g. Gemini, ChatGPT)
+	      or model identifiers (e.g. Qwen3-32B).
 \end{enumerate}
 
 
