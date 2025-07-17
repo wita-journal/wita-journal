@@ -16,6 +16,9 @@ case "$1" in
     issue/*/*. )
         [[ -e "${1}tex" ]] && ./make.sh "${1}tex"
         ;;
+    issue/*/*.tex.d/entry/*/ )
+        [[ -e "${1}main.tex" ]] && bash utils/preprint.sh "$1"
+        ;;
     issue/*/*.tex.d/ )
         ### Build for issue metadata
         (
@@ -41,11 +44,11 @@ case "$1" in
         ./make.sh "$1.d" || exit 1
         year="$(cut -d/ -f2 <<< "$1")"
         issue_id="$(cut -d/ -f3 <<< "$1" | cut -d. -f1)"
-        # ntex "$1"
-        # cp -av ".tmp/$issue_id.bcf" "issue/$year/$issue_id.bcf"
-        # biber "issue/$year/$issue_id"
-        # cp -av "issue/$year/$issue_id.bbl" ".tmp/$issue_id.bbl"
-        # ntex "$1" --2
+        ntex "$1"
+        cp -av ".tmp/$issue_id.bcf" "issue/$year/$issue_id.bcf"
+        biber "issue/$year/$issue_id"
+        cp -av "issue/$year/$issue_id.bbl" ".tmp/$issue_id.bbl"
+        ntex "$1" --2
         pdf_path="_dist/issue/$year/$issue_id.pdf"
         # bash utils/splitpdf.sh "$pdf_path"
         pdftoppm -png -f 1 -l 1 -scale-to-y 2000 -singlefile "$pdf_path" "${pdf_path/.pdf/}"

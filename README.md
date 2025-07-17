@@ -6,7 +6,10 @@ A AIGC-themed journal.
 
 ## Website
 
-Current preprint: https://weightintheattention.pages.dev/issue/2025/202508
+Mirrors:
+[A](https://weightintheattention.pages.dev/)
+[B](https://wita.nekostein.com/)
+[C](https://wita.neruthes.xyz/)
 
 
 

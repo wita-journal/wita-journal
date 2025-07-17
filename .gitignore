@@ -332,3 +332,5 @@ nogit/
 website/www/
 website/data/
 website/build/
+.tmp/
+workdir/

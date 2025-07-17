@@ -2,9 +2,9 @@
 
     <!-- breadcumb? -->
     <div class="text-sm py-4">
-        <a href="/">Home</a> /
-        <a href="../../">Issues</a> /
-        <a href="../">{{year}}</a> /
+        <a class="hover:text-blue-600" href="/">Home</a> /
+        <a class="hover:text-blue-600" href="../">Issues</a> /
+        <a class="hover:text-blue-600" href="./">{{year}}</a> /
         WITA.{{issue}}
     </div>
 
@@ -27,7 +27,7 @@
             <div>
                 {{#article}}
                     <div class="py-3 border-b-1 border-slate-200">
-                        <div class="text-md"><a class="hover:text-blue-600" href="/files/entry/{{year}}/{{issue}}/WITA.{{issue}}.{{index}}.pdf">{{title}}</a></div>
+                        <div class="text-lg"><a class="hover:text-blue-600" href="/files/entry/{{year}}/{{issue}}/WITA.{{issue}}.{{index}}.pdf">{{title}}</a></div>
                         <div class="text-sm text-slate-500">
                             <div>{{authors_simple}}</div>
                             <div>{{license}}</div>

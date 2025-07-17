@@ -16,11 +16,11 @@ while read -r IssueID; do
     mustache "data/issue-$IssueID.json" src/templates/issue.html > "build/issue/$year/$IssueID.html"
 done <<< "$issues_arr"
 
+mustache <(tomlq -r . site.toml) src/templates/home.html > "build/index.html"
 
 
 rsync -auvpx --mkpath ../vi/ www/static/vi/
 rsync -auvpx --mkpath build/ www/
-# mv build/home.html build/index.html
 
 # find data -type f -delete
 # find build -type f -delete
