@@ -1,3 +1,9 @@
+year = "0000"
+issue = "000000"
+sn = 1
+editors = ["Neruthes"]
+[id_seq_map]
+"example" = "1"
 [[article]]
 
 id = "example"
@@ -10,3 +16,4 @@ abstract = """
 Lorem ipsum dolor sit amet.
 This is a dummy article.
 """
+index = 1

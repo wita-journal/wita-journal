@@ -1,0 +1,75 @@
+<div class="px-6 md:px-12">
+
+    <!-- breadcumb? -->
+    <div class="text-sm py-4">
+        <a class="underline hover:text-blue-600" href="/">Home</a> /
+        <a class="underline hover:text-blue-600" href="../../">Issues</a> /
+        <a class="underline hover:text-blue-600" href="../">{{issue.year}}</a> /
+        <a class="underline hover:text-blue-600" href="../{{issue.issue}}.html">WITA.{{issue.issue}}</a> /
+        WITA.{{issue.issue}}.{{article.index}}
+    </div>
+
+    <div class="grid gap-4 md:gap-8">
+        <div class="">
+            <div class="pb-3">
+                <h1 class="text-3xl font-bold">{{article.title}}</h1>
+            </div>
+            <div>{{article.authors_simple}}</div>
+            <div class="my-8 border-b-1 border-slate-200"></div>
+            <div>
+                <div><a class="inline-block text-center text-lg bg-blue-500 text-white px-2 py-1 rounded-md" style="min-width: 110px;" href="../../../files/entry/{{issue.year}}/{{issue.issue}}/WITA.{{issue.issue}}.{{article.index}}.pdf">Get PDF</a></div>
+            </div>
+
+            <!-- border -->
+            <div class="my-8 border-b-1 border-slate-200"></div>
+
+            <div>
+                <h2 class="text-xl font-bold my-4">Abstract</h2>
+                <div>
+                    <p class="text-md" style="max-width: 40em;">{{article.abstract}}</p>
+                </div>
+            </div>
+
+            <!-- border -->
+            <div class="my-8 border-b-1 border-slate-200"></div>
+
+            <div>
+                <h2 class="text-xl font-bold my-4">Cite this article</h2>
+                <div>
+                    <pre id="jsPreBibtex" class="monospace text-md"></pre>
+                </div>
+                <script>
+                    (function () {
+                        let xhr = new XMLHttpRequest();
+                        xhr.open('GET', '../../../data/issue/{{issue.year}}/{{issue.issue}}.json');
+                        xhr.send();
+                        xhr.onload = function () {
+                            // console.log(xhr);
+                            // console.log(xhr.responseText);
+                            function escapeHtml(html) {
+                                var text = document.createTextNode(html);
+                                var p = document.createElement('p');
+                                p.appendChild(text);
+                                return p.innerHTML;
+                            }
+                            let data = JSON.parse(xhr.responseText);
+                            console.log(data);
+                            let entry = data.article.filter(obj => obj.index.toString() === '{{article.index}}')[0];
+                            const bibtex_str = `@article{${data.issue}_{{article.index}},
+                                title = {${entry.title}},
+                                author = {${entry.authors_simple}},
+                                journal = {Weight in the Attention},
+                                volume = {${data.issue}},
+                                year = {${data.year}},
+                                month = {${data.issue.slice(4)}},
+                                eprint = {WITA.${data.issue}.{{article.index}}},
+                            }`.replace(/\n\s+/g, '\n@').replace(/\n@([^\}])/g, '\n    $1').replace('@}', '}');
+                            document.querySelector('#jsPreBibtex').innerHTML = escapeHtml(bibtex_str);
+                        };
+                    })();
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>

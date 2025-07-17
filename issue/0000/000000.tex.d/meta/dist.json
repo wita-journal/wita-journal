@@ -5,6 +5,9 @@
   "editors": [
     "Neruthes"
   ],
+  "id_seq_map": {
+    "example": "1"
+  },
   "article": [
     {
       "id": "example",
@@ -15,6 +18,7 @@
       "authors_simple": "Neruthes (WITA Editor)",
       "date": "0000-00-00",
       "license": "Public Domain",
+      "abstract": "Lorem ipsum dolor sit amet.\nThis is a dummy article.\n",
       "index": 1
     }
   ]

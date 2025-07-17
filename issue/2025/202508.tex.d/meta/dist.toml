@@ -1,0 +1,71 @@
+year = "2025"
+issue = "202508"
+sn = 1
+editors = ["Neruthes"]
+[id_seq_map]
+"001" = "1"
+"002" = "2"
+"003" = "3"
+"004" = "4"
+[[article]]
+
+id = "001"
+title = "The founding of Weight in the Attention, a journal for the AIGC Zeitgeist"
+authors = ["Neruthes (WITA Editor)"]
+authors_simple = "Neruthes"
+date = "2025-07-17"
+license = "CC BY-ND 4.0"
+abstract = """
+This article is a founding memo of the Weight in the Attention journal, a project inspired by the recent AIGC bubble.
+In time of post-COVID economic stringency, the AIGC landscape presents a dramatic spectacle
+of eager to recreate the good old pre-COVID entrepreneurship hype.
+Existing works have demonstrated a promising vision
+for making fun of the time and the trend as both an outsider and an insider.
+The author examined possible vacancies for AIGC-oriented humor and satire and proposed
+the creation of this journal as a leisure platform.
+"""
+index = 1
+[[article]]
+
+id = "002"
+title = "WITA Manuscript Submission Guide"
+authors = ["Neruthes (WITA Editor)"]
+authors_simple = "Neruthes"
+date = "2025-07-14"
+license = "CC BY-ND 4.0"
+abstract = """
+Like most journals, Weight in the Attention (WITA) handles manuscript submissions.
+A rare characteristic of WITA is that the submission process is based on Git, GitHub, and pull request.
+This guide offers a comprehensive guide for authors in good faith of establishing an efficient manuscript acceptance workflow.
+Key takeaway --- if you would like to submit an already published article, just open an issue and include URL to your article.
+"""
+index = 2
+[[article]]
+
+id = "003"
+title = "My Startup Is Just a Claude Wrapper, but It’s a Free Claude Wrapper"
+authors = ["Neruthes", "ChatGPT (OpenAI)"]
+authors_simple = "Neruthes, et al."
+date = "2025-07-14"
+license = "Public Domain"
+abstract = """
+In 2025's AI frenzy, few brag sheets boast more bravado than ``We're a Claude wrapper.''
+At conferences, hackathons, and booster-pitch dinners, someone inevitably leads with:
+``We didn't train a model --- we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''
+Congratulations: your startup is officially ``innovative''---as long as flimsy UI counts as disruptive.
+"""
+index = 3
+[[article]]
+
+id = "004"
+title = "Navigating the AI Geoscape: A Multi-Faceted Analysis of Manus AI's Strategic Retreat from Mainland China"
+authors = ["Neruthes", "Gemini (Google)"]
+authors_simple = "Neruthes, et al."
+date = "2025-07-14"
+license = "Public Domain"
+abstract = """
+This report analyzes the recent strategic pivot of Manus AI, a prominent Chinese AI agent startup, involving the cessation of its mainland China operations and the relocation of its global headquarters to Singapore.
+While geopolitical tensions, particularly US investment restrictions and export controls on advanced AI chips, are widely cited as primary drivers, this analysis argues that Manus AI's move was also significantly influenced by intense domestic market competition, challenges in product differentiation, and a proactive global talent strategy.
+By examining the interplay of these external and internal pressures, the report offers a holistic perspective on the complex decision-making processes of Chinese AI firms navigating an increasingly polarized global technology landscape, highlighting Singapore's role as a strategic ``third path'' hub.
+"""
+index = 4

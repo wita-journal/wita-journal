@@ -6,3 +6,12 @@ authors = ["Neruthes (WITA Editor)"]
 authors_simple = "Neruthes"
 date = "2025-07-17"
 license = "CC BY-ND 4.0"
+abstract = """
+This article is a founding memo of the Weight in the Attention journal, a project inspired by the recent AIGC bubble.
+In time of post-COVID economic stringency, the AIGC landscape presents a dramatic spectacle
+of eager to recreate the good old pre-COVID entrepreneurship hype.
+Existing works have demonstrated a promising vision
+for making fun of the time and the trend as both an outsider and an insider.
+The author examined possible vacancies for AIGC-oriented humor and satire and proposed
+the creation of this journal as a leisure platform.
+"""

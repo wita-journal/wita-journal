@@ -6,3 +6,8 @@ authors = ["Neruthes", "Gemini (Google)"]
 authors_simple = "Neruthes, et al."
 date = "2025-07-14"
 license = "Public Domain"
+abstract = """
+This report analyzes the recent strategic pivot of Manus AI, a prominent Chinese AI agent startup, involving the cessation of its mainland China operations and the relocation of its global headquarters to Singapore.
+While geopolitical tensions, particularly US investment restrictions and export controls on advanced AI chips, are widely cited as primary drivers, this analysis argues that Manus AI's move was also significantly influenced by intense domestic market competition, challenges in product differentiation, and a proactive global talent strategy.
+By examining the interplay of these external and internal pressures, the report offers a holistic perspective on the complex decision-making processes of Chinese AI firms navigating an increasingly polarized global technology landscape, highlighting Singapore's role as a strategic ``third path'' hub.
+"""

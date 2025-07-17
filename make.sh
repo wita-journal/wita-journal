@@ -21,21 +21,40 @@ case "$1" in
         ;;
     issue/*/*.tex.d/ )
         ### Build for issue metadata
+        tmp_prefix=".tmp/$(cut -d/ -f3 <<< "$1")"
+        printf '' > "$tmp_prefix.map"
+        printf '' > "$tmp_prefix.list"
         (
+            ### Verbatim metadata
             cat "$1/meta/meta.toml"
             # entry_id_list="$(cut -d, -f1 < "$1/meta/toc.csv")"
-            counter=0
 
-            # find "$1"/entry -type f -name info.toml | sort | 
+            ### Articles
+            counter=0
             while read -r line; do
                 counter=$((counter+1))
                 id="$(cut -d, -f1 <<< "$line")"
                 toml_path="$1/entry/$id/info.toml"
-                cat "$toml_path"
-                echo "index = $counter"
+                ### Some to map
+                (
+                    printf '"%s" = "%s"\n' "$id" "$counter"
+                ) >> "$tmp_prefix.map"
+
+                ### Some to list
+                (
+                    cat "$toml_path";
+                    echo "index = $counter"
+                ) >> "$tmp_prefix.list"
             done < "$1/meta/toc.csv"
-        ) | tomlq . > "$1/meta/meta.json"
-        cat "$1/meta/meta.json"
+
+            ### Send to stdout
+            echo '[id_seq_map]'
+            cat "$tmp_prefix.map"
+            cat "$tmp_prefix.list"
+        ) > "$1/meta/dist.toml"
+        tomlq -r . "$1/meta/dist.toml" > "$1/meta/dist.json"
+        cat "$1/meta/dist.toml"
+        cp -av "$tmp_prefix.map" "$1/meta/map.toml"
         ;;
 
     issue/*/*.tex )

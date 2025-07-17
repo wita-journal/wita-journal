@@ -6,14 +6,16 @@
 \usepackage{pbox,adjustbox,tikz,tcolorbox}
 \usepackage{fontawesome5}
 
-\setmainfont[Numbers=Monospaced]{TeX Gyre Schola}
-\setromanfont[Numbers=Monospaced]{TeX Gyre Schola}
-\setsansfont[Numbers=Monospaced]{TeX Gyre Heros}
-\setmonofont[Scale=0.88]{JetBrains Mono NL}
-\setCJKmainfont[AutoFakeSlant=0.22]{Noto Serif CJK SC}
-\setCJKromanfont[AutoFakeSlant=0.22]{Noto Serif CJK SC}
-\setCJKsansfont[AutoFakeSlant=0.22]{Noto Sans CJK SC}
-\setCJKmonofont[AutoFakeSlant=0.22]{Noto Sans CJK SC}
+\usepackage{tgschola,tgheros,plex-mono}
+\usepackage[T1]{fontenc}
+% \setmainfont[Numbers=Monospaced]{TeX Gyre Schola}
+% \setromanfont[Numbers=Monospaced]{TeX Gyre Schola}
+% \setsansfont[Numbers=Monospaced]{TeX Gyre Heros}
+% \setmonofont[Scale=0.88]{JetBrains Mono NL}
+\setCJKmainfont[AutoFakeBold=3,AutoFakeSlant=0.22]{FandolSong}
+\setCJKromanfont[AutoFakeBold=3,AutoFakeSlant=0.22]{FandolSong}
+\setCJKsansfont[AutoFakeBold=3,AutoFakeSlant=0.22]{FandolHei}
+\setCJKmonofont[AutoFakeBold=3,AutoFakeSlant=0.22]{FandolHei}
 \setlength{\parindent}{2em}
 \setlength{\parskip}{6pt}
 \allsectionsfont{\sffamily\raggedright}
@@ -38,7 +40,7 @@
 \makeatletter
 \AddToShipoutPictureFG{
     \put(3mm,50mm){%
-        \rotatebox{90}{\scalebox{1}{\Huge\textcolor{gray}{\fbox{PREPRINT}}}}
+        \rotatebox{90}{\scalebox{1}{\Huge\textcolor{black!15}{{MANUSCRIPT PREPRINT}}}}
     }
 }
 \newcommand{\@issueyear}[0]{1453}
@@ -70,7 +72,7 @@
 	\stepcounter{EntrySeqInIssue}
 	\normalsize\upshape\rmfamily\mdseries%
 	% Pre-article heading...
-	\noindent\@setprimarytag\par\hrule\par%
+	\noindent\strut\@setprimarytag\par\hrule\par%
 	% Read article title...
 	\noindent\parbox{\linewidth}{%
 		\parskip=13pt%
@@ -83,9 +85,7 @@
 }
 \newcommand{\importarticle}[1]{%
 	\par%
-	% \begin{refsection}[#1]
-		\input{\issuepath/entry/#1/main.tex}
-	% \end{refsection}
+    \input{\issuepath/entry/#1/main.tex}
 }
 \makeatother
 
@@ -105,5 +105,4 @@
 }
 
 % Biblatex
-% \newcommand{\addcitebib}[1]{\addbibresource[label=#1]{\issuepath/entry/#1/cite.bib}}
 \newcommand{\addcitebib}[1]{\addbibresource{\issuepath/entry/#1/cite.bib}}

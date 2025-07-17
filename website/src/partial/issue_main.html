@@ -2,9 +2,9 @@
 
     <!-- breadcumb? -->
     <div class="text-sm py-4">
-        <a class="hover:text-blue-600" href="/">Home</a> /
-        <a class="hover:text-blue-600" href="../">Issues</a> /
-        <a class="hover:text-blue-600" href="./">{{year}}</a> /
+        <a class="underline hover:text-blue-600" href="/">Home</a> /
+        <a class="underline hover:text-blue-600" href="../">Issues</a> /
+        <a class="underline hover:text-blue-600" href="./">{{year}}</a> /
         WITA.{{issue}}
     </div>
 
@@ -18,18 +18,19 @@
         <div class="md:col-span-2 lg:col-span-3">
             <div class="text-3xl font-bold pb-3">WITA.{{issue}}</div>
             <div><a class="inline-block text-center text-lg bg-blue-500 text-white px-2 py-1 rounded-md" style="min-width: 110px;" href="../../files/issue/{{year}}/{{issue}}.pdf">Get PDF</a></div>
-            <div class="py-6 border-b-1 border-slate-200"></div>
-            <!-- <div>SN {{sn}}</div> -->
-            <div class="py-6"></div>
+            <div class="my-8 border-b-1 border-slate-200"></div>
             <div>
                 <h2 class="font-bold text-lg">Articles in this issue</h2>
             </div>
             <div>
                 {{#article}}
                     <div class="py-3 border-b-1 border-slate-200">
-                        <div class="text-lg"><a class="hover:text-blue-600" href="/files/entry/{{year}}/{{issue}}/WITA.{{issue}}.{{index}}.pdf">{{title}}</a></div>
+                        <div class="text-lg"><a class="hover:text-blue-600" href="./{{issue}}/{{issue}}.{{index}}.html">{{title}}</a></div>
                         <div class="text-sm text-slate-500">
-                            <div>{{authors_simple}}</div>
+                            <div class="flex flex-row gap-3">
+                                <div>ID: WITA.{{issue}}.{{index}}</div>
+                                <div>{{authors_simple}}</div>
+                            </div>
                             <div>{{license}}</div>
                         </div>
                     </div>
