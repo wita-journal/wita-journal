@@ -10,6 +10,9 @@ if [[ -e "$2" ]]; then
 fi
 
 case "$1" in
+    issue/ )
+        exec ./make.sh issue/*/*.tex.d/
+        ;;
     issue/*/*. )
         [[ -e "${1}tex" ]] && ./make.sh "${1}tex"
         ;;
@@ -17,10 +20,19 @@ case "$1" in
         ### Build for issue metadata
         (
             cat "$1/meta/meta.toml"
-            find "$1"/entry -type f -name info.toml | sort | while read -r toml_path; do
+            # entry_id_list="$(cut -d, -f1 < "$1/meta/toc.csv")"
+            counter=0
+
+            # find "$1"/entry -type f -name info.toml | sort | 
+            while read -r line; do
+                counter=$((counter+1))
+                id="$(cut -d, -f1 <<< "$line")"
+                toml_path="$1/entry/$id/info.toml"
                 cat "$toml_path"
-            done
+                echo "index = $counter"
+            done < "$1/meta/toc.csv"
         ) | tomlq . > "$1/meta/meta.json"
+        cat "$1/meta/meta.json"
         ;;
 
     issue/*/*.tex )
@@ -29,13 +41,14 @@ case "$1" in
         ./make.sh "$1.d" || exit 1
         year="$(cut -d/ -f2 <<< "$1")"
         issue_id="$(cut -d/ -f3 <<< "$1" | cut -d. -f1)"
-        ntex "$1"
-        cp -av ".tmp/$issue_id.bcf" "issue/$year/$issue_id.bcf"
-        biber "issue/$year/$issue_id"
-        cp -av "issue/$year/$issue_id.bbl" ".tmp/$issue_id.bbl"
-        ntex "$1" --2
+        # ntex "$1"
+        # cp -av ".tmp/$issue_id.bcf" "issue/$year/$issue_id.bcf"
+        # biber "issue/$year/$issue_id"
+        # cp -av "issue/$year/$issue_id.bbl" ".tmp/$issue_id.bbl"
+        # ntex "$1" --2
         pdf_path="_dist/issue/$year/$issue_id.pdf"
-        bash utils/splitpdf.sh "$pdf_path"
+        # bash utils/splitpdf.sh "$pdf_path"
+        pdftoppm -png -f 1 -l 1 -scale-to-y 2000 -singlefile "$pdf_path" "${pdf_path/.pdf/}"
         ;;
 
     issue/*/*.tex.d/meta/cover.js )

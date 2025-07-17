@@ -1,7 +1,4 @@
 year = "0000"
-id = "000000"
+issue = "000000"
 sn = 1
-
-[pages]
-"example" = "3-3"
-
+editors = ["Neruthes"]

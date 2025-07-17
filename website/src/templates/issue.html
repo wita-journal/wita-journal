@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Issue WITA.{{id}} | Weight in the Attention</title>
+    <style>
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+</head>
+
+<body>
+    <div class="app-topbar  fixed w-full bg-white border-b-1 border-slate-300 px-6 py-6 md:px-12">
+    <header class="flex grow">
+        <div class="topbar-inner flex grow flex-col md:flex-row justify-between md:items-center">
+            <h1><img style="height: 50px;" src="/static/vi/res/wm1.png" alt=""><span class="hidden">WITA</span></h1>
+            <div class="flex flex-row text-sm md:text-lg md:text-right gap-3 md:gap-4 pt-3 md:py-0">
+                <a href="/">Home</a>
+                <a href="/">Issues</a>
+                <a href="/">Submission</a>
+                <a href="/">About</a>
+            </div>
+        </div>
+    </header>
+</div>
+<div style="height: 130px;"></div>
+<div class="md:hidden" style="height: 30px;"></div>
+    <div class="px-6 md:px-12">
+
+    <!-- breadcumb? -->
+    <div class="text-sm py-4">
+        <a href="/">Home</a> /
+        <a href="../../">Issues</a> /
+        <a href="../">{{year}}</a> /
+        WITA.{{issue}}
+    </div>
+
+    <!-- top-down, md:left-right -->
+    <div class="grid grid-col-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
+        <!-- leftpart -->
+        <div class="">
+            <div><img src="../../files/issue/{{year}}/{{issue}}.png" alt="" class="border-1 border-slate-200" style="display: block; width: 100%"></div>
+        </div>
+        <!-- rightpart -->
+        <div class="md:col-span-2 lg:col-span-3">
+            <div class="text-3xl font-bold pb-3">WITA.{{issue}}</div>
+            <div><a class="inline-block text-center text-lg bg-blue-500 text-white px-2 py-1 rounded-md" style="min-width: 110px;" href="../../files/issue/{{year}}/{{issue}}.pdf">Get PDF</a></div>
+            <div class="py-6 border-b-1 border-slate-200"></div>
+            <!-- <div>SN {{sn}}</div> -->
+            <div class="py-6"></div>
+            <div>
+                <h2 class="font-bold text-lg">Articles in this issue</h2>
+            </div>
+            <div>
+                {{#article}}
+                    <div class="py-3 border-b-1 border-slate-200">
+                        <div class="text-md"><a class="hover:text-blue-600" href="/files/entry/{{year}}/{{issue}}/WITA.{{issue}}.{{index}}.pdf">{{title}}</a></div>
+                        <div class="text-sm text-slate-500">
+                            <div>{{authors_simple}}</div>
+                            <div>{{license}}</div>
+                        </div>
+                    </div>
+                {{/article}}
+            </div>
+        </div>
+    </div>
+
+</div>
+    <div class="app-footer  mt-12 py-12 px-6">
+    <footer>This is footer</footer>
+</div>
+</body>
+
+</html>

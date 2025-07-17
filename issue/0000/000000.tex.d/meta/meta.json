@@ -1,10 +1,10 @@
 {
   "year": "0000",
-  "id": "000000",
+  "issue": "000000",
   "sn": 1,
-  "pages": {
-    "example": "3-3"
-  },
+  "editors": [
+    "Neruthes"
+  ],
   "article": [
     {
       "id": "example",
@@ -14,7 +14,8 @@
       ],
       "authors_simple": "Neruthes (WITA Editor)",
       "date": "0000-00-00",
-      "license": "Public Domain"
+      "license": "Public Domain",
+      "index": 1
     }
   ]
 }

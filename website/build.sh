@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ### Use this script to build website from templates and data
+(cd src && bash build.sh)
 
 issues_arr="$(find ../issue -name meta.json | cut -d/ -f4 | cut -c1-6 | grep -v 000000 | sort -u)"
 
@@ -12,18 +13,14 @@ done <<< "$issues_arr"
 while read -r IssueID; do
     year="${IssueID:0:4}"
     mkdir -p build/issue/"$year"
-    mustache "data/issue-$IssueID.json" src/issue.html > "build/issue/$year/$IssueID.html"
+    mustache "data/issue-$IssueID.json" src/templates/issue.html > "build/issue/$year/$IssueID.html"
 done <<< "$issues_arr"
 
 
 
+rsync -auvpx --mkpath ../vi/ www/static/vi/
 rsync -auvpx --mkpath build/ www/
+# mv build/home.html build/index.html
 
-find data -type f -delete
-find build -type f -delete
-
-
-[[ -n $PNG ]] && { find www/files/issue -name '*.pdf' | while read -r pdf; do
-    # outpath="$pdf.png"
-    pdftoppm -png -f 1 -l 1 -scale-to-y 2000 -singlefile "$pdf" "${pdf/.pdf/}"
-done }
+# find data -type f -delete
+# find build -type f -delete
