@@ -12,7 +12,7 @@ grep -v '^#' "$list_path" | while read -r line; do
     f_author="$(cut -d'|' -f5 <<< "$line")"
     f_title="$(cut -d'|' -f6- <<< "$line")"
 
-    texfn="accept/$year/EBA.$f_letterid.tex"
+    texfn="accept/$year/EB.$f_letterid.tex"
     cp accept/_tmpl-1.tex "$texfn"
 
     sed -i "s|f_date|$f_date|g" "$texfn"
@@ -25,4 +25,4 @@ done
 
 cmd_run_alt="echo"
 [[ "$2" == ! ]] && cmd_run_alt="command"
-$cmd_run_alt ntex accept/$year/EBA.*.tex
+$cmd_run_alt ntex accept/$year/EB.*.tex
