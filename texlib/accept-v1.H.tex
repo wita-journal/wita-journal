@@ -1,16 +1,17 @@
 \input{texlib/wita-letter.H.tex}
 \linespread{1.15}
-\usepackage{eqparbox}
+\usepackage{eqparbox,pbox}
 
 \setupdecorations
 \newcommand{\makeacceptletter}[6]{
-	% argv: date, hook, id, sn, authors, title
+	% argv: date, sender, issue, letter_no, author, title
 	\rmfamily\normalsize\mdseries\upshape
-	\begin{flushright}
-		WITA JOURNAL UNINC\\
-        \MakeUppercase{Editors Board}
-	\end{flushright}
-	% \vskip 4em
+	\toprightcornerOnce{%
+		\rmfamily\normalsize\mdseries\upshape%
+		WITA JOURNAL UNINC\\%
+		EDITORS BOARD\\
+		RefNo: EB.#4%
+	}
 
 	\lettertitle{\center LETTER OF ACCEPTANCE}
 
@@ -19,24 +20,20 @@
 	Your submission manuscript~%
 	\itshape\bfseries#6\mdseries\upshape~%
 	has been accepted.
-	The article is scheduled to be published in \textbf{Weight in the Attention #3} (WITA.#3, S/N #4).
+	The article is scheduled to be published in \textmd{Weight in the Attention #3} (WITA.#3).
 
+	Notice:
+	\begin{compactitem}
+		\item You still retain full copyright.
+		WITA needs your global, royalty-free permission to redistribute your work.
+		\item WITA reserves the right to take down your article from released WITA publications
+		in the event that a plausible copyright infringement complaint is filed.
+		\item While WITA aims to promote verbatim publishing,
+		an editor may decide to make minor editorial changes for citation, punctuation, etc.
+	\end{compactitem}
 	\vfill
 
-	#2 % Any hook here...
-
-	\par\vfill
-	\stdlettersig{#1}
-	\vskip 15mm\clearpage
+	\stdlettersig{Best regards\\#2\\[1ex]#1}
+	\vskip 5mm\clearpage
 }
 
-\makeatletter
-\newcommand{\stdlettersig}[1]{
-    \begin{flushright}
-		% \large
-		% \eqparbox{footer}{Best regards,}\par
-		\eqparbox{footer}{Best regards,\\\@author}\par\vskip 4pt%
-		\eqparbox{footer}{#1}\par%
-	\end{flushright}
-}
-\makeatother

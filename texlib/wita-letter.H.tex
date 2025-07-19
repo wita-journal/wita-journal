@@ -17,7 +17,7 @@
 \setlength{\parindent}{0em} % Or 2em?
 \setlength{\parskip}{6pt}
 \allsectionsfont{\sffamily\raggedright}
-\setdefaultleftmargin{4em}{2em}{2em}{2em}{2em}{2em}
+\setdefaultleftmargin{2em}{2em}{2em}{2em}{2em}{2em}
 \frenchspacing
 \sloppy
 \raggedbottom
@@ -25,18 +25,30 @@
 
 \makeatletter
 \newcommand{\setupdecorations}[0]{
-    \AddToShipoutPictureBG{
-        \put(\Gm@lmargin,250mm){\parbox[t][55mm][t]{\textwidth}{\includegraphics[width=0.33\linewidth]{vi/dist/wm1.png}}}
-    }
+	\AddToShipoutPictureBG{%
+		\put(\Gm@lmargin,250mm){\parbox[t][55mm][t]{\textwidth}{\includegraphics[width=0.33\linewidth]{vi/dist/wm1.png}}}%
+	}
+}
+\newcommand{\toprightcornerOnce}[1]{
+	\AddToShipoutPictureFG*{%
+		\put(\Gm@lmargin,270mm){%
+			\parbox[t][120mm][t]{\textwidth}{\flushright#1}%
+		}%
+	}%
 }
 \makeatother
 
+% Letter info control
 \newcommand{\lettertitle}[1]{
-    \begin{minipage}{\linewidth}%
-        \sffamily\Large\bfseries\strut#1\strut%
-    \end{minipage}%
-    \par\vskip 15mm
+	\begin{minipage}{\linewidth}%
+		\sffamily\Large\bfseries\strut#1\strut%
+	\end{minipage}%
+	\par\vskip 15mm
 }
+\newcommand{\stdlettersig}[1]{
+    \par\hfill\pbox{999mm}{#1}\par
+}
+
 
 
 \usepackage{listings}
