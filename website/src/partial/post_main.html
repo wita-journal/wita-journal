@@ -1,0 +1,37 @@
+<div class="px-6 md:px-12">
+
+    <!-- breadcumb? -->
+    <div class="text-sm py-4">
+        <a class="underline hover:text-blue-600" href="/">Home</a> /
+        <a class="underline hover:text-blue-600" href="../../">Blog</a> /
+        <a class="underline hover:text-blue-600" href="../">{{year}}</a> /
+        This Post
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-4 md:gap-8 mt-10">
+        <!-- metadata -->
+        <!-- <div class="lg:col-span-1 lg:order-last">
+            <aside class="p-5 bg-slate-100 rounded-md">
+                <div class="text-lg">{{author}}</div>
+                <div>{{date}}</div>
+            </aside>
+        </div> -->
+
+        <!-- post body -->
+        <div class="lg:col-span-2">
+            <div class="pb-3">
+                <h1 class="text-3xl font-bold">{{title}}</h1>
+            </div>
+            <div class="py-6 text-slate-500">
+                <aside class="">
+                    <div class="">{{author}}</div>
+                    <div><time datetime="{{date}}">{{date}}</time></div>
+                </aside>
+            </div>
+            <!-- <article class="text-lg">!POSTBODY!</article> -->
+            <article class="text-lg">{{{content}}}</article>
+        </div>
+    </div>
+
+
+</div>

@@ -1,5 +1,6 @@
 #!/bin/bash
-
+### Use this script to build website from templates and data
+### PWD should be $REPODIR/website
 
 
 ### Purge working cache dir...?
@@ -8,7 +9,6 @@
 
 
 
-### Use this script to build website from templates and data
 (cd src && bash build.sh)
 
 
@@ -20,8 +20,8 @@ while read -r IssueID; do
     year="${IssueID:0:4}"
     mkdir -p "data/issue/$year"
     cp -av "../issue/${IssueID:0:4}/$IssueID.tex.d/meta/dist.json" "data/issue/$year/$IssueID.json" 
-    mkdir -p "build/issue/$year"
-    mustache "data/issue/$year/$IssueID.json" src/templates/issue.html > "build/issue/$year/$IssueID.html"
+    mkdir -p "build/issue/$year/$IssueID"
+    mustache "data/issue/$year/$IssueID.json" src/templates/issue.html > "build/issue/$year/$IssueID/index.html"
 done <<< "$issues_arr"
 
 
@@ -83,3 +83,4 @@ rsync -auvpx --mkpath ../vi/ www/static/vi/
 rsync -auvpx --mkpath build/ www/
 rsync -auvpx --mkpath data/ www/data/
 
+bash blog.sh

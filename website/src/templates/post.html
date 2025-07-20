@@ -5,7 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>{{year}} | Issues Archive | Weight in the Attention</title>
+    <title>{{title}} | Blog | Weight in the Attention</title>
+<style>
+    article {
+        max-width: 800px;
+    }
+    article h2 {
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+    article h3 {
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    article h2,
+    article h3 {
+        margin: 1.5em 0 0.3em;
+    }
+    article blockquote,
+    article ul,
+    article ol,
+    article p {
+        margin: 1em 0 0.2em;
+    }
+    article li {
+        margin-left: 2em;
+        list-style: disc;
+        list-style-position: outside;
+    }
+    article p, article li {
+        text-align: justify;
+    }
+</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -51,32 +82,41 @@
 <div style="height: 130px;"></div>
 <div class="md:hidden" style="height: 30px;"></div>
     <div class="px-6 md:px-12">
+
     <!-- breadcumb? -->
     <div class="text-sm py-4">
-        <a class="underline hover:text-blue-600" href="../../">Home</a> /
-        <a class="underline hover:text-blue-600" href="../">Issues</a> /
-        {{year}}
+        <a class="underline hover:text-blue-600" href="/">Home</a> /
+        <a class="underline hover:text-blue-600" href="../../">Blog</a> /
+        <a class="underline hover:text-blue-600" href="../">{{year}}</a> /
+        This Post
     </div>
-</div>
 
-<div class="px-6 md:px-12">
-    <div class="mb-12">
-        <h1 class="text-3xl font-bold">Issues of {{year}}</h1>
-    </div>
-    <div>
-        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 lg:gap-5">
-            {{#issue}}
-            <div class="col-span-1">
-                <a class="underline hover:text-blue-600 text-2xl" href="./{{issue_id}}.html">
-                    <div>
-                        <img src="/files/issue/{{year}}/{{issue_id}}.png" alt="" class="border-1 border-slate-200 hover:border-slate-400 hover:shadow-lg shadow-slate-200 rounded-md">
-                    </div>
-                    <div class="text-center text-md">{{issue_id}}</div>
-                </a>
+    <div class="grid lg:grid-cols-3 gap-4 md:gap-8 mt-10">
+        <!-- metadata -->
+        <!-- <div class="lg:col-span-1 lg:order-last">
+            <aside class="p-5 bg-slate-100 rounded-md">
+                <div class="text-lg">{{author}}</div>
+                <div>{{date}}</div>
+            </aside>
+        </div> -->
+
+        <!-- post body -->
+        <div class="lg:col-span-2">
+            <div class="pb-3">
+                <h1 class="text-3xl font-bold">{{title}}</h1>
             </div>
-            {{/issue}}
+            <div class="py-6 text-slate-500">
+                <aside class="">
+                    <div class="">{{author}}</div>
+                    <div><time datetime="{{date}}">{{date}}</time></div>
+                </aside>
+            </div>
+            <!-- <article class="text-lg">!POSTBODY!</article> -->
+            <article class="text-lg">{{{content}}}</article>
         </div>
     </div>
+
+
 </div>
     <div class="app-footer  mt-12 px-6 md:px-12 py-12">
     <footer class="text-slate-500">

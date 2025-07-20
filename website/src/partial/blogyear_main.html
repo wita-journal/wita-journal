@@ -1,0 +1,27 @@
+<div class="px-6 md:px-12">
+
+    <!-- breadcumb? -->
+    <div class="text-sm py-4">
+        <a class="underline hover:text-blue-600" href="/">Home</a> /
+        <a class="underline hover:text-blue-600" href="../">Blog</a> /
+        {{year}}
+    </div>
+
+
+    <div>
+        {{#post}}
+        <div class="py-3 my-5 border-b-1 border-slate-200">
+            <div>
+                <h2 class="text-2xl font-bold">
+                    <a class="hover:underline hover:text-blue-600" href="./{{url}}/">{{title}}</a>
+                </h2>
+            </div>
+            <div class="text-slate-500 text-sm">
+                {{date}}
+                &nbsp;&nbsp;&nbsp;
+                {{author}}
+            </div>
+        </div>
+        {{/post}}
+    </div>
+</div>

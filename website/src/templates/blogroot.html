@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>{{year}} | Issues Archive | Weight in the Attention</title>
+    <!-- URL: /blog -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -53,30 +53,20 @@
     <div class="px-6 md:px-12">
     <!-- breadcumb? -->
     <div class="text-sm py-4">
-        <a class="underline hover:text-blue-600" href="../../">Home</a> /
-        <a class="underline hover:text-blue-600" href="../">Issues</a> /
-        {{year}}
+        <a class="underline hover:text-blue-600" href="../">Home</a> /
+        Blog
     </div>
 </div>
 
 <div class="px-6 md:px-12">
     <div class="mb-12">
-        <h1 class="text-3xl font-bold">Issues of {{year}}</h1>
+        <h1 class="text-3xl font-bold">All Years</h1>
     </div>
+    {{#year}}
     <div>
-        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 lg:gap-5">
-            {{#issue}}
-            <div class="col-span-1">
-                <a class="underline hover:text-blue-600 text-2xl" href="./{{issue_id}}.html">
-                    <div>
-                        <img src="/files/issue/{{year}}/{{issue_id}}.png" alt="" class="border-1 border-slate-200 hover:border-slate-400 hover:shadow-lg shadow-slate-200 rounded-md">
-                    </div>
-                    <div class="text-center text-md">{{issue_id}}</div>
-                </a>
-            </div>
-            {{/issue}}
-        </div>
+        <a class="underline hover:text-blue-600 text-2xl" href="./{{year_id}}/">{{year_id}}</a>
     </div>
+    {{/year}}
 </div>
     <div class="app-footer  mt-12 px-6 md:px-12 py-12">
     <footer class="text-slate-500">

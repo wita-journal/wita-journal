@@ -1,0 +1,18 @@
+<div class="px-6 md:px-12">
+    <!-- breadcumb? -->
+    <div class="text-sm py-4">
+        <a class="underline hover:text-blue-600" href="../">Home</a> /
+        Blog
+    </div>
+</div>
+
+<div class="px-6 md:px-12">
+    <div class="mb-12">
+        <h1 class="text-3xl font-bold">All Years</h1>
+    </div>
+    {{#year}}
+    <div>
+        <a class="underline hover:text-blue-600 text-2xl" href="./{{year_id}}/">{{year_id}}</a>
+    </div>
+    {{/year}}
+</div>
