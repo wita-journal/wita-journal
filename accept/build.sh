@@ -1,6 +1,6 @@
 #!/bin/bash
 
-list_path="$1"
+list_path="$1" # Example: /accept/0000/list.txt
 year="$(cut -d/ -f2 <<< "$list_path")"
 
 grep -v '^#' "$list_path" | while read -r line; do
@@ -25,4 +25,4 @@ done
 
 cmd_run_alt="echo"
 [[ "$2" == ! ]] && cmd_run_alt="command"
-$cmd_run_alt ntex accept/$year/EB.*.tex
+$cmd_run_alt ntex "accept/$year/EB.*.tex"
