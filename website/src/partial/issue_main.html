@@ -12,12 +12,12 @@
     <div class="grid grid-col-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
         <!-- leftpart -->
         <div class="">
-            <div><img src="../../files/issue/{{year}}/{{issue}}.png" alt="" class="border-1 border-slate-200 rounded-md" style="display: block; width: 100%"></div>
+            <div><img src="../../../files/issue/{{year}}/{{issue}}.png" alt="" class="border-1 border-slate-200 rounded-md" style="display: block; width: 100%"></div>
         </div>
         <!-- rightpart -->
         <div class="md:col-span-2 lg:col-span-3">
             <div class="text-3xl font-bold pb-3">WITA.{{issue}}</div>
-            <div><a class="inline-block text-center text-lg bg-blue-500 text-white px-2 py-1 rounded-md" style="min-width: 110px;" href="../../files/issue/{{year}}/{{issue}}.pdf">Get PDF</a></div>
+            <div><a class="inline-block text-center text-lg bg-blue-500 text-white px-2 py-1 rounded-md" style="min-width: 110px;" href="../../../files/issue/{{year}}/{{issue}}.pdf">Get PDF</a></div>
             <div class="my-8 border-b-1 border-slate-200"></div>
             <div>
                 <h2 class="font-bold text-lg">Articles in this issue</h2>
@@ -25,7 +25,7 @@
             <div>
                 {{#article}}
                     <div class="py-3 border-b-1 border-slate-200">
-                        <div class="text-lg"><a class="hover:text-blue-600" href="./{{issue}}/{{issue}}.{{index}}.html">{{title}}</a></div>
+                        <div class="text-lg"><a class="hover:text-blue-600" href="./{{issue}}.{{index}}.html">{{title}}</a></div>
                         <div class="text-sm text-slate-500">
                             <div class="flex flex-row gap-3">
                                 <div>ID: WITA.{{issue}}.{{index}}</div>

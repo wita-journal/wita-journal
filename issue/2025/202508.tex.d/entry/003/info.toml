@@ -9,6 +9,6 @@ license = "Public Domain"
 abstract = """
 In 2025's AI frenzy, few brag sheets boast more bravado than ``We're a Claude wrapper.''
 At conferences, hackathons, and booster-pitch dinners, someone inevitably leads with:
-``We didn't train a model --- we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''
-Congratulations: your startup is officially ``innovative''---as long as flimsy UI counts as disruptive.
+``We didn't train a model—we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''
+Congratulations: your startup is officially ``innovative''—as long as flimsy UI counts as disruptive.
 """
