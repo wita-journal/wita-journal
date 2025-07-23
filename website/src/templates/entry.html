@@ -57,7 +57,7 @@
         <a class="underline hover:text-blue-600" href="/">Home</a> /
         <a class="underline hover:text-blue-600" href="../../">Issues</a> /
         <a class="underline hover:text-blue-600" href="../">{{issue.year}}</a> /
-        <a class="underline hover:text-blue-600" href="../{{issue.issue}}.html">WITA.{{issue.issue}}</a> /
+        <a class="underline hover:text-blue-600" href="../{{issue.issue}}/">WITA.{{issue.issue}}</a> /
         WITA.{{issue.issue}}.{{article.index}}
     </div>
 
@@ -107,7 +107,7 @@
                             let data = JSON.parse(xhr.responseText);
                             console.log(data);
                             let entry = data.article.filter(obj => obj.index.toString() === '{{article.index}}')[0];
-                            const bibtex_str = `@article{${data.issue}_{{article.index}},
+                            const bibtex_str = `@article{wita_${data.issue}_{{article.index}},
                                 title = {${entry.title}},
                                 author = {${entry.authors_simple}},
                                 journal = {Weight in the Attention},
