@@ -9,7 +9,8 @@
     "001": "1",
     "002": "2",
     "003": "3",
-    "004": "4"
+    "004": "4",
+    "qwencoder": "5"
   },
   "article": [
     {
@@ -61,6 +62,19 @@
       "license": "Public Domain",
       "abstract": "This report analyzes the recent strategic pivot of Manus AI, a prominent Chinese AI agent startup, involving the cessation of its mainland China operations and the relocation of its global headquarters to Singapore.\nWhile geopolitical tensions, particularly US investment restrictions and export controls on advanced AI chips, are widely cited as primary drivers, this analysis argues that Manus AI's move was also significantly influenced by intense domestic market competition, challenges in product differentiation, and a proactive global talent strategy.\nBy examining the interplay of these external and internal pressures, the report offers a holistic perspective on the complex decision-making processes of Chinese AI firms navigating an increasingly polarized global technology landscape, highlighting Singapore's role as a strategic ``third path'' hub.\n",
       "index": 4
+    },
+    {
+      "id": "qwencoder",
+      "title": "Literature Review: Qwen3-Coder Official Announcement and Internet Reception",
+      "authors": [
+        "Neruthes",
+        "Gemini (Google)"
+      ],
+      "authors_simple": "Neruthes, et al.",
+      "date": "2025-07-24",
+      "license": "Public Domain",
+      "abstract": "This literature review provides an in-depth analysis of Qwen3-Coder, the latest large language model from the QwenLM Team, focusing on its official announcement and initial community reception. The analysis synthesizes key architectural innovations, advanced training paradigms—including novel reinforcement learning strategies—and claimed state-of-the-art benchmark performances in agentic coding, browser-use, and tool-use. Concurrently, it critically examines the community's immediate concerns, particularly revolving around the formidable hardware requirements for local deployment and the efficacy of various quantization techniques. The review highlights the model's significant advancements in context handling and multi-turn problem-solving, while also addressing practical drawbacks such as resource intensity and ongoing discussions regarding benchmark transparency and real-world reliability. Finally, concrete directions for future improvements are proposed, emphasizing accessibility, robust validation, and ecosystem development to maximize Qwen3-Coder's impact within the software development landscape.\n",
+      "index": 5
     }
   ]
 }
