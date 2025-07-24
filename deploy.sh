@@ -5,4 +5,5 @@ wrangler pages deploy website/www --project-name="weightintheattention" --commit
 
 if [[ -d ../wita-journal.github.io ]]; then
     rsync --dry-run -auvpx --mkpath website/www/ ../wita-journal.github.io/docs/
+    echo "[INFO] Remember to commit and push 'wita-journal.github.io' repo."
 fi
