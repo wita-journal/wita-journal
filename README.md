@@ -9,9 +9,10 @@ A AIGC-themed journal.
 
 
 Mirrors:
-[A](https://weightintheattention.pages.dev/)
-[B](https://wita.nekostein.com/)
-[C](https://wita.neruthes.xyz/)
+[GitHub](https://wita-journal.github.io)
+[Cloudflare](https://weightintheattention.pages.dev/)
+[Nekostein](https://wita.nekostein.com/)
+[Neruthes](https://wita.neruthes.xyz/)
 
 
 
