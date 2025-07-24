@@ -38,7 +38,7 @@ abstract = """
 Like most journals, Weight in the Attention (WITA) handles manuscript submissions.
 A rare characteristic of WITA is that the submission process is based on Git, GitHub, and pull request.
 This guide offers a comprehensive guide for authors in good faith of establishing an efficient manuscript acceptance workflow.
-Key takeaway --- if you would like to submit an already published article, just open an issue and include URL to your article.
+Key takeaway—if you would like to submit an already published article, just open an issue and include URL to your article.
 """
 index = 2
 [[article]]
@@ -52,8 +52,8 @@ license = "Public Domain"
 abstract = """
 In 2025's AI frenzy, few brag sheets boast more bravado than ``We're a Claude wrapper.''
 At conferences, hackathons, and booster-pitch dinners, someone inevitably leads with:
-``We didn't train a model --- we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''
-Congratulations: your startup is officially ``innovative''---as long as flimsy UI counts as disruptive.
+``We didn't train a model—we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''
+Congratulations: your startup is officially ``innovative''—as long as flimsy UI counts as disruptive.
 """
 index = 3
 [[article]]
@@ -73,7 +73,7 @@ index = 4
 [[article]]
 
 id = "qwencoder"
-title = "Literature Review: Qwen3-Coder Official Announcement and Internet Reception"
+title = "A Comprehensive Review of Qwen3-Coder: Oﬀicial Capabilities, Benchmarks, and Community Insights"
 authors = ["Neruthes", "Gemini (Google)"]
 authors_simple = "Neruthes, et al."
 date = "2025-07-24"

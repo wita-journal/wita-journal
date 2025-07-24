@@ -34,7 +34,7 @@
       "authors_simple": "Neruthes",
       "date": "2025-07-14",
       "license": "CC BY-ND 4.0",
-      "abstract": "Like most journals, Weight in the Attention (WITA) handles manuscript submissions.\nA rare characteristic of WITA is that the submission process is based on Git, GitHub, and pull request.\nThis guide offers a comprehensive guide for authors in good faith of establishing an efficient manuscript acceptance workflow.\nKey takeaway --- if you would like to submit an already published article, just open an issue and include URL to your article.\n",
+      "abstract": "Like most journals, Weight in the Attention (WITA) handles manuscript submissions.\nA rare characteristic of WITA is that the submission process is based on Git, GitHub, and pull request.\nThis guide offers a comprehensive guide for authors in good faith of establishing an efficient manuscript acceptance workflow.\nKey takeaway—if you would like to submit an already published article, just open an issue and include URL to your article.\n",
       "index": 2
     },
     {
@@ -47,7 +47,7 @@
       "authors_simple": "Neruthes, et al.",
       "date": "2025-07-14",
       "license": "Public Domain",
-      "abstract": "In 2025's AI frenzy, few brag sheets boast more bravado than ``We're a Claude wrapper.''\nAt conferences, hackathons, and booster-pitch dinners, someone inevitably leads with:\n``We didn't train a model --- we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''\nCongratulations: your startup is officially ``innovative''---as long as flimsy UI counts as disruptive.\n",
+      "abstract": "In 2025's AI frenzy, few brag sheets boast more bravado than ``We're a Claude wrapper.''\nAt conferences, hackathons, and booster-pitch dinners, someone inevitably leads with:\n``We didn't train a model—we integrated Claude's API in 30 minutes, wrapped a lightweight UI, and voilà!''\nCongratulations: your startup is officially ``innovative''—as long as flimsy UI counts as disruptive.\n",
       "index": 3
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "id": "qwencoder",
-      "title": "Literature Review: Qwen3-Coder Official Announcement and Internet Reception",
+      "title": "A Comprehensive Review of Qwen3-Coder: Oﬀicial Capabilities, Benchmarks, and Community Insights",
       "authors": [
         "Neruthes",
         "Gemini (Google)"
