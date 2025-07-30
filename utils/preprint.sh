@@ -1,7 +1,9 @@
 #!/bin/bash
 
 ### This script generates preprint for single article.
-### Usage:  bash utils/preprint.sh issue/0000/000000.tex.d/
+### Usage:  bash utils/preprint.sh issue/0000/000000.tex.d/entry/001/
+
+[[ -e "$1"main.tex ]] || { echo 'Bad path'; exit 1; }
 
 
 entry_dir="$(realpath --relative-to . "$1")"

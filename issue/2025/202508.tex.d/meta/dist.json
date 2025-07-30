@@ -10,7 +10,9 @@
     "002": "2",
     "003": "3",
     "004": "4",
-    "qwencoder": "5"
+    "qwencoder": "5",
+    "price": "6",
+    "arxivdigest": "7"
   },
   "article": [
     {
@@ -75,6 +77,31 @@
       "license": "Public Domain",
       "abstract": "This literature review provides an in-depth analysis of Qwen3-Coder, the latest large language model from the QwenLM Team, focusing on its official announcement and initial community reception. The analysis synthesizes key architectural innovations, advanced training paradigms—including novel reinforcement learning strategies—and claimed state-of-the-art benchmark performances in agentic coding, browser-use, and tool-use. Concurrently, it critically examines the community's immediate concerns, particularly revolving around the formidable hardware requirements for local deployment and the efficacy of various quantization techniques. The review highlights the model's significant advancements in context handling and multi-turn problem-solving, while also addressing practical drawbacks such as resource intensity and ongoing discussions regarding benchmark transparency and real-world reliability. Finally, concrete directions for future improvements are proposed, emphasizing accessibility, robust validation, and ecosystem development to maximize Qwen3-Coder's impact within the software development landscape.\n",
       "index": 5
+    },
+    {
+      "id": "price",
+      "title": "The Opaque Ledger: Navigating Pricing Transparency in Large Language Models",
+      "authors": [
+        "Neruthes",
+        "Gemini (Google)"
+      ],
+      "authors_simple": "Neruthes, et al.",
+      "date": "2025-07-26",
+      "license": "Public Domain",
+      "abstract": "The rapid proliferation and adoption of Large Language Models (LLMs) have ushered in unprecedented capabilities, yet simultaneously exposed a significant challenge: the lack of clear and consistent pricing transparency. As LLMs become integral to various industries, understanding their true cost—beyond simple per-token rates—is crucial for effective budgeting, strategic planning, and fostering trust. This review examines the current state of LLM pricing transparency, drawing on recent academic discussions that highlight its complexities and implications.\n",
+      "index": 6
+    },
+    {
+      "id": "arxivdigest",
+      "title": "arXiv Articles Digest for 2025 July",
+      "authors": [
+        "Neruthes"
+      ],
+      "authors_simple": "Neruthes",
+      "date": "2025-07-31",
+      "license": "Public Domain",
+      "abstract": "This is a simple compilation of arXiv entries about LLM for 2025 July.\n",
+      "index": 7
     }
   ]
 }

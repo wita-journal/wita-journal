@@ -31,15 +31,15 @@ case "$1" in
         printf '' > "$tmp_prefix.list"
         (
             ### Verbatim metadata
-            cat "$1/meta/meta.toml"
-            # entry_id_list="$(cut -d, -f1 < "$1/meta/toc.csv")"
+            cat "${1}meta/meta.toml"
+            # entry_id_list="$(cut -d, -f1 < "${1}meta/toc.csv")"
 
             ### Articles
             counter=0
             while read -r line; do
                 counter=$((counter+1))
                 id="$(cut -d, -f1 <<< "$line")"
-                toml_path="$1/entry/$id/info.toml"
+                toml_path="${1}entry/$id/info.toml"
                 ### Some to map
                 (
                     printf '"%s" = "%s"\n' "$id" "$counter"
@@ -50,22 +50,23 @@ case "$1" in
                     cat "$toml_path";
                     echo "index = $counter"
                 ) >> "$tmp_prefix.list"
-            done < "$1/meta/toc.csv"
+            done < "${1}meta/toc.csv"
 
             ### Send to stdout
             echo '[id_seq_map]'
             cat "$tmp_prefix.map"
             cat "$tmp_prefix.list"
-        ) > "$1/meta/dist.toml"
-        tomlq -r . "$1/meta/dist.toml" > "$1/meta/dist.json"
-        cat "$1/meta/dist.toml"
-        cp -av "$tmp_prefix.map" "$1/meta/map.toml"
+        ) > "${1}meta/dist.toml"
+        tomlq -r . "${1}meta/dist.toml" > "${1}meta/dist.json"
+        cat "${1}meta/dist.toml"
+        cp -av "$tmp_prefix.map" "${1}meta/map.toml"
         ;;
 
     issue/*/*.tex )
         ### Build LaTeX to PDF
-        [[ -d "$1.d" ]] || exit 1
-        ./make.sh "$1.d" || exit 1
+        # [[ -d "$1.d" ]] || exit 21
+        ./make.sh "$1.d"
+        echo '### Build LaTeX to PDF'
         year="$(cut -d/ -f2 <<< "$1")"
         issue_id="$(cut -d/ -f3 <<< "$1" | cut -d. -f1)"
         find "issue/$year/" -name '*.bbl' -delete
@@ -106,3 +107,6 @@ case "$1" in
         cd website && bash build.sh
         ;;
 esac
+
+
+[[ -e "$1.recipe.sh" ]] && bash "$1.recipe.sh"

@@ -1,0 +1,11 @@
+[[article]]
+
+id = "arxivdigest"
+title = "arXiv Articles Digest for 2025 July"
+authors = ["Neruthes"]
+authors_simple = "Neruthes"
+date = "2025-07-31"
+license = "Public Domain"
+abstract = """
+This is a simple compilation of arXiv entries about LLM for 2025 July.
+"""
