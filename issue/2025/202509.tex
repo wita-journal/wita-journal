@@ -1,0 +1,25 @@
+\input{texlib/issue-v1.H.tex}
+\setdocmetadata{2025}{202509}{2}
+\author{Neruthes} % Chief editor of a particular issue
+
+
+
+\addcitebib{news}
+
+
+
+
+\begin{document}
+\makecoverpage{
+    % \markasdraft
+    \AddToShipoutPictureBG*{\put(0mm,0mm){\includegraphics[height=\paperheight]{\issuepath/meta/cover.js.svg.pdf}}}
+	\coverarticles{
+		\coverarticlerow{\Large\bfseries Article Title 1}{P.1}
+		\coverarticlerow{Article Title 2}{P.3}
+	}
+}
+
+\importarticle{news}
+
+
+\end{document}
